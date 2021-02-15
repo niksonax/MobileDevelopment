@@ -4,6 +4,7 @@
  *
  * @format
  * @flow strict-local
+ * TEST
  */
 
 import React from 'react';
