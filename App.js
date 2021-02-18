@@ -8,10 +8,11 @@
  */
 
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Drawing from './modules/Drawing';
 
 const Tab = createBottomTabNavigator();
 const student = ['Канюка Микита', 'Група ІО-81', 'ЗК ІО-8111'];
@@ -30,27 +31,26 @@ function renderStudentData() {
   );
 }
 
-function item2() {
+/* function drawing() {
   return <View></View>;
-}
+} */
 
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color, size}) => {
+          tabBarIcon: ({focused}) => {
             let iconName;
 
             if (route.name === 'StudentData') {
               iconName = 'man-outline';
-            } else if (route.name === 'Item2') {
-              iconName = 'settings-outline';
+            } else if (route.name === 'Drawing') {
+              iconName = 'pencil-outline';
             }
 
             let iconColor = focused ? '#1fc5f2' : 'black';
 
-            // You can return any component that you like here!
             return <Icon name={iconName} size={32} color={iconColor} />;
           },
         })}
@@ -66,7 +66,7 @@ const App: () => React$Node = () => {
           },
         }}>
         <Tab.Screen name="StudentData" component={renderStudentData} />
-        <Tab.Screen name="Item2" component={item2} />
+        <Tab.Screen name="Drawing" component={Drawing} />
       </Tab.Navigator>
     </NavigationContainer>
   );
