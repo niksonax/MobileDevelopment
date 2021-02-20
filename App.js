@@ -13,6 +13,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Drawing from './modules/Drawing';
+import BooksList from './modules/BooksList';
 
 const Tab = createBottomTabNavigator();
 const student = ['Канюка Микита', 'Група ІО-81', 'ЗК ІО-8111'];
@@ -31,10 +32,6 @@ function renderStudentData() {
   );
 }
 
-/* function drawing() {
-  return <View></View>;
-} */
-
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
@@ -47,6 +44,8 @@ const App: () => React$Node = () => {
               iconName = 'man-outline';
             } else if (route.name === 'Drawing') {
               iconName = 'pencil-outline';
+            } else if (route.name === 'BooksList') {
+              iconName = 'book-outline';
             }
 
             let iconColor = focused ? '#1fc5f2' : 'black';
@@ -67,6 +66,7 @@ const App: () => React$Node = () => {
         }}>
         <Tab.Screen name="StudentData" component={renderStudentData} />
         <Tab.Screen name="Drawing" component={Drawing} />
+        <Tab.Screen name="BooksList" component={BooksList} />
       </Tab.Navigator>
     </NavigationContainer>
   );

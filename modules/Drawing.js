@@ -14,10 +14,10 @@ const Drawing = () => {
     switchValue ? <Text>Task B</Text> : <Text>Task A</Text>;
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} supportedOrint>
       <CurrentTaskName />
       <Switch
-        style={({marginTop: 30}, {marginBottom: 60})}
+        style={({marginTop: 30}, {marginBottom: 30})}
         onValueChange={toggleSwitch}
         value={switchValue}
       />
