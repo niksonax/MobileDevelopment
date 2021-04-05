@@ -60,6 +60,7 @@ class BookList extends React.Component {
         <TouchableOpacity onPress={() => this.deleteBook(rowData.title, index)}>
           <View style={swipeableStyle(height)}>
             <Animated.Text
+              // eslint-disable-next-line react-native/no-inline-styles
               style={{
                 color: 'white',
                 paddingHorizontal: 10,
@@ -165,6 +166,7 @@ class BookList extends React.Component {
           platform="android"
           lightTheme={true}
           round={true}
+          // eslint-disable-next-line react-native/no-inline-styles
           containerStyle={{height: 50}}
           onChangeText={this.updateSearch}
           onClear={this.updateSearch}
