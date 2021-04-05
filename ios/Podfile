@@ -3,12 +3,14 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'myLab' do
+target 'Lab' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'myLabTests' do
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  target 'LabTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +25,10 @@ target 'myLab' do
   end
 end
 
-target 'myLab-tvOS' do
-  # Pods for myLab-tvOS
+target 'Lab-tvOS' do
+  # Pods for Lab-tvOS
 
-  target 'myLab-tvOSTests' do
+  target 'Lab-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
