@@ -21,7 +21,7 @@ Adding Images:
 
 Image Collection (Portrait):
 
-<img src="https://i.imgur.com/KI4054i.png" height="25%" width="25%">
+<img src="https://i.imgur.com/KI4054i.png" height="28%" width="28%">
 
 Image Collection (Landscape):
 
