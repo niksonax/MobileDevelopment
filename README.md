@@ -15,22 +15,14 @@ Run project:
 
 ### Result
 
-Books List:
+Adding Images:
 
-<img src="https://i.imgur.com/vFSwi4M.png" height="25%" width="25%">
+<img src="demo-lab5.gif">
 
-Book Details:
+Image Collection (Portrait):
 
-<img src="https://i.imgur.com/rggq3sq.png" height="25%" width="25%">
+<img src="https://i.imgur.com/KI4054i.png" height="25%" width="25%">
 
-Adding Book:
+Image Collection (Landscape):
 
-<img src="https://i.imgur.com/bmR3eO2.png" height="25%" width="25%">
-
-Using Search Book:
-
-<img src="https://i.imgur.com/iQ8XFHY.png" height="25%" width="25%">
-
-Deleting Book:
-
-<img src="https://i.imgur.com/UGRuipu.png" height="25%" width="25%">
+<img src="https://i.imgur.com/GkxANvZ.png" >

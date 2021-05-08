@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {StyleSheet, View, Text, TextInput, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
@@ -16,8 +8,10 @@ import Drawing from './src/Drawing';
 import BooksList from './src/BooksList';
 import DetailBook from './src/DetailBook';
 import BookAdd from './src/BookAdd';
+import ImagesCollection from './src/ImagesCollection';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {IconButton, Colors} from 'react-native-paper';
+import ImageAdd from './src/ImageAdd';
 
 const student = ['Канюка Микита', 'Група ІО-81', 'ЗК ІО-8111'];
 
@@ -45,9 +39,11 @@ function getHeader(route) {
   switch (routeName) {
     case 'Drawing':
       return false;
-    case 'StudentData':
+    case 'Student':
       return false;
-    case 'BooksList':
+    case 'Books':
+      return true;
+    case 'Images': // Ask Nazar
       return true;
   }
 }
@@ -57,15 +53,24 @@ function getHeaderRight(route, navigation) {
   switch (routeName) {
     case 'Drawing':
       return null;
-    case 'StudentData':
+    case 'Student':
       return null;
-    case 'BooksList':
+    case 'Books':
       return (
         <IconButton
           icon="plus"
           color={Colors.lightBlueA700}
           size={35}
           onPress={() => navigation.navigate('BookAdd')}
+        />
+      );
+    case 'Images':
+      return (
+        <IconButton
+          icon="plus"
+          color={Colors.lightBlueA700}
+          size={35}
+          onPress={() => ImageAdd(navigation, route)}
         />
       );
   }
@@ -86,17 +91,19 @@ function TabGeneral({navigation, route}) {
         tabBarIcon: ({focused}) => {
           let iconName;
 
-          if (route.name === 'StudentData') {
+          if (route.name === 'Student') {
             iconName = 'man-outline';
           } else if (route.name === 'Drawing') {
             iconName = 'pencil-outline';
-          } else if (route.name === 'BooksList') {
+          } else if (route.name === 'Books') {
             iconName = 'book-outline';
+          } else if (route.name === 'Images') {
+            iconName = 'images-outline';
           }
 
           let iconColor = focused ? '#1fc5f2' : 'black';
 
-          return <Icon name={iconName} size={32} color={iconColor} />;
+          return <Icon name={iconName} size={28} color={iconColor} />;
         },
       })}
       tabBarOptions={{
@@ -110,9 +117,10 @@ function TabGeneral({navigation, route}) {
           height: 70,
         },
       }}>
-      <Tab.Screen name="StudentData" component={StudentData} />
+      <Tab.Screen name="Student" component={StudentData} />
       <Tab.Screen name="Drawing" component={Drawing} />
-      <Tab.Screen name="BooksList" component={BooksList} />
+      <Tab.Screen name="Books" component={BooksList} />
+      <Tab.Screen name="Images" component={ImagesCollection} />
     </Tab.Navigator>
   );
 }
