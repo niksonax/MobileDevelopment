@@ -43,7 +43,7 @@ function getHeader(route) {
       return false;
     case 'Books':
       return true;
-    case 'Images': // Ask Nazar
+    case 'Images':
       return true;
   }
 }

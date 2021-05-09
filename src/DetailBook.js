@@ -26,57 +26,62 @@ class BookDetail extends React.Component {
     return (
       <ScrollView>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
-          <Image style={{height: 250, width: 220}} source={img_path} />
+          <Image
+            style={{height: 250, width: 220}}
+            source={{
+              uri: this.props.route.params.ListViewClickItemHolder._W.image,
+            }}
+          />
         </View>
         <View style={{padding: 20}}>
           <Text style={styles.textTitle}>
             Title:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.title}
+              {this.props.route.params.ListViewClickItemHolder._W.title}
             </Text>
           </Text>
           <Text style={styles.textTitle}>
             Subtitle:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.subtitle}
+              {this.props.route.params.ListViewClickItemHolder._W.subtitle}
             </Text>
           </Text>
           <Text style={styles.textTitle}>
             Description:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.description}
+              {this.props.route.params.ListViewClickItemHolder._W.description}
             </Text>
           </Text>
           <Text />
           <Text style={styles.textTitle}>
             Authors:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.authors}
+              {this.props.route.params.ListViewClickItemHolder._W.authors}
             </Text>
           </Text>
           <Text style={styles.textTitle}>
             Publisher:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.publisher}
+              {this.props.route.params.ListViewClickItemHolder._W.publisher}
             </Text>
           </Text>
           <Text />
           <Text style={styles.textTitle}>
             Pages:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.pages}
+              {this.props.route.params.ListViewClickItemHolder._W.pages}
             </Text>
           </Text>
           <Text style={styles.textTitle}>
             Year:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.year}
+              {this.props.route.params.ListViewClickItemHolder._W.year}
             </Text>
           </Text>
           <Text style={styles.textTitle}>
             Rating:{' '}
             <Text style={styles.textContent}>
-              {this.props.route.params.ListViewClickItemHolder.rating}/5
+              {this.props.route.params.ListViewClickItemHolder._W.rating}/5
             </Text>
           </Text>
         </View>

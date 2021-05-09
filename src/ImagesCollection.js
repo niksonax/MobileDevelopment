@@ -4,12 +4,34 @@ import images from './Images';
 import {Col, Row, Grid} from 'react-native-easy-grid';
 
 class ImagesCollection extends React.Component {
+  getPhoto() {
+    fetch(
+      `https://pixabay.com/api/?key=19193969-87191e5db266905fe8936d565&q=red+cars&image_type=photo&per_page=21`,
+    )
+      .then((respsonse) => respsonse.json())
+      .then((data) => {
+        for (let i = 0; i < data.hits.length; i += 1) {
+          if (!images.includes(data.hits[i].largeImageURL)) {
+            images.push(data.hits[i].largeImageURL);
+          }
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        this.setState({loading: false});
+      });
+  }
+
   constructor(props) {
     super(props);
+    this.getPhoto();
     this.state = {dataSource: images};
   }
 
   componentWillMount = () => {
+    this.getPhoto();
     this.setState({dataSource: images});
   };
 

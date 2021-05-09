@@ -15,14 +15,10 @@ Run project:
 
 ### Result
 
-Adding Images:
+Book List Search:
 
-<img src="demo-lab5.gif">
+<img src="https://i.imgur.com/7g7Mtc1.png" width="30%"> <img src="https://i.imgur.com/ohxUMJU.png" width="30%"> <img src="https://i.imgur.com/eAS6kx7.png" width="30%">
 
-Image Collection (Portrait):
+Image Collection (red + cars):
 
-<img src="https://i.imgur.com/KI4054i.png" height="25%" width="25%">
-
-Image Collection (Landscape):
-
-<img src="https://i.imgur.com/GkxANvZ.png" >
+<img src="https://i.imgur.com/QJ03QH6.png" width="30%"> <img src="https://i.imgur.com/yNV22Bt.png" width="30%">
