@@ -5,13 +5,10 @@
 Install all packages:
 `npm install`
 
-Clean cache and start bundler:
-`npm start -- --reset-cache / npm start / react-native start `
-
 ### Usage
 
 Run project:
-`npx react-native run-android`
+`npx react-native run-android / npm run android`
 
 ### Result
 
