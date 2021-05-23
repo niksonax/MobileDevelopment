@@ -19,3 +19,6 @@ Book List Search:
 Image Collection (red + cars):
 
 <img src="https://i.imgur.com/QJ03QH6.png" width="30%"> <img src="https://i.imgur.com/yNV22Bt.png" width="30%">
+
+### Database used:
+SQLite
